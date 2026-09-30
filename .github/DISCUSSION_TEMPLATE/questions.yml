@@ -1,0 +1,39 @@
+labels: [q&a]
+body:
+  - type: input
+    id: fio
+    attributes:
+      label: Привет, меня зовут
+      description: |
+        Напиши свои ФИО и номер группы, чтобы тебе ответил преподаватель, который ведет у тебя пары
+      placeholder: |
+        Фамилия И.О. 641Х
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: lab
+    attributes:
+      label: У меня вопрос по
+      description: |
+        Выбери лабораторную, которая вызвала трудности
+      multiple: true
+      options:
+        - 1 лабораторной работе (Классы)
+        - 2 лабораторной работе (Сервер)
+        - 3 лабораторной работе (ORM)
+        - 4 лабораторной работе (Инфраструктура)
+        - 5 лабораторной работе (Клиент)
+    validations:
+      required: true
+      
+  - type: textarea
+    id: details
+    attributes:
+      label: Описание проблемы
+      description: | 
+        Подробно опиши проблему, с которой ты столкнулся при выполнении лабораторной
+      placeholder: |
+        Также было бы крайне полезно привести помимо текстового описания проблемы скриншоты и фрагменты кода
+    validations:
+      required: true
